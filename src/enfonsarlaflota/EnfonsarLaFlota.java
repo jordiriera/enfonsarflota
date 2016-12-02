@@ -5,6 +5,8 @@
  */
 package enfonsarlaflota;
 
+import java.util.Arrays;
+
 /**
  *
  * @author aluadmin
@@ -16,6 +18,10 @@ public class EnfonsarLaFlota {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Tauler aa = new Tauler();
+        
+        aa.prueba();
+        //aa.taulero[10][10];
     }
     
 }

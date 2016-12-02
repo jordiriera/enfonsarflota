@@ -10,9 +10,21 @@ package enfonsarlaflota;
  * @author aluadmin
  */
 public class Tauler {
+
     
-    int[][] tauler = new int [10][10];
+
+    int[][] tauler = new int[10][10];
+
     
-    
-    
+    //imprimir tabuler amb 0 (esta malament)
+    public void prueba(){
+        for (int i = 0; i < 10; i++){
+            for (int j = 0; j < 10; j++){
+                tauler[i][j] = 0;
+                System.out.print(tauler[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
 }

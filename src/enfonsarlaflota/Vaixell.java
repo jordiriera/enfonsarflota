@@ -10,32 +10,49 @@ package enfonsarlaflota;
  * @author aluadmin
  */
 public class Vaixell {
+
+    
     
     enum tipusvaixell {portaavions, vaixell, llanxa}
     
     int vaixellenfonsat;        
     int [][] posicionsOcupades ;
-    int vaixell;
-    boolean posicionsFerides = false;
+    boolean [][]posicionsFerides;
+    boolean enfonsat = false;
     String triarvaixell;
-    int longitud;
+    int mida;
+    
+    
         
     
     public void Vaixell(){
-        tipusvaixell.portaavions
+        
     }
     
     public void formaVaixells(){
         if (triarvaixell.equals("portaavions")){
-            posicionsOcupades
             
+            posicionsOcupades = new int [5][2];
         }
+            if (triarvaixell.equals("vaixell")){
+            posicionsOcupades = new int [3][2];
+        }
+            if (triarvaixell.equals("lanxa")){
+                posicionsOcupades = new int [2][2];
+            }
     }
     
-    public static void generarVaixells(int x, int y){
-        
-        
-        
+    
+    
+    public void posicionsFerides(int x, int y){
+        posicionsFerides [x][y] = true;
     }
-
+    
+       public void enfonsat(){
+            
+           enfonsat = true;
+            
+        }
+        
 }
+
