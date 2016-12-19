@@ -5,7 +5,7 @@
  */
 package enfonsarlaflota;
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  *
@@ -19,9 +19,12 @@ public class EnfonsarLaFlota {
     public static void main(String[] args) {
         // TODO code application logic here
         Tauler aa = new Tauler();
+        Vaixell bb = new Vaixell(Vaixell.tipusvaixell.portaavions);
         
         aa.prueba();
-        //aa.taulero[10][10];
+        aa.generarVaixell(4);
+        aa.imprimirVaixell();
+        
     }
     
 }

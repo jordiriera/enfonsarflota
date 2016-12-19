@@ -11,48 +11,43 @@ package enfonsarlaflota;
  */
 public class Vaixell {
 
-    
-    
-    enum tipusvaixell {portaavions, vaixell, llanxa}
-    
-    int vaixellenfonsat;        
-    int [][] posicionsOcupades ;
-    boolean [][]posicionsFerides;
+    enum tipusvaixell {
+        portaavions, vaixell, llanxa
+    }
+
+    int vaixellenfonsat;
+    int[][] posicionsOcupades;
+    boolean[][] posicionsFerides;
     boolean enfonsat = false;
-    String triarvaixell;
+    //  String triarvaixell;
     int mida;
     
-    
-        
-    
-    public void Vaixell(){
-        
-    }
-    
-    public void formaVaixells(){
-        if (triarvaixell.equals("portaavions")){
-            
-            posicionsOcupades = new int [5][2];
+    static int fila, col;
+
+    public Vaixell(tipusvaixell tria) {
+        if (tria.equals("portaavions")) {
+            mida = 5;
+            posicionsOcupades = new int[5][2];
         }
-            if (triarvaixell.equals("vaixell")){
-            posicionsOcupades = new int [3][2];
+        if (tria.equals("vaixell")) {
+            posicionsOcupades = new int[3][2];
+            mida = 3;
         }
-            if (triarvaixell.equals("lanxa")){
-                posicionsOcupades = new int [2][2];
-            }
-    }
-    
-    
-    
-    public void posicionsFerides(int x, int y){
-        posicionsFerides [x][y] = true;
-    }
-    
-       public void enfonsat(){
-            
-           enfonsat = true;
-            
+        if (tria.equals("lanxa")) {
+            posicionsOcupades = new int[2][2];
+            mida = 2;
         }
-        
+    }
+
+    public void posicionsFerides(int x, int y) {
+        posicionsFerides[x][y] = true;
+    }
+
+    public void enfonsat() {
+
+        enfonsat = true;
+    }
+
 }
+
 
